@@ -1,0 +1,9 @@
+{% extends "../layout.html" %}
+{% load static %}
+{% block content %}
+<div class="content-section">
+  <snall class="text-muted">
+    You have been logged out <a href="{% url 'invent:login' %}">Login Again</a>
+  </snall>
+</div>
+{% endblock %}

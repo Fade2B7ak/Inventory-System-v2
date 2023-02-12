@@ -1,0 +1,74 @@
+{% extends "../layout.html" %}
+{% block content %}
+<div class="content-section">
+  <div class="row mx-auto justify-content-center">
+
+    <div class="card m-4" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title text-center">Item Class</h5>
+        <div style="font-size: 30px;" class="text-center">
+        </div>
+        <h3 class="text-center">{{ inventory.itemClass }}</h3>
+      </div>
+    </div>
+
+    <div class="card m-4" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title text-center">Product Name</h5>
+        <div style="font-size: 30px;" class="text-center">
+        </div>
+        <h3 class="text-center">{{ inventory.name }}</h3>
+      </div>
+    </div>
+
+    <div class="card m-4" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title text-center">Model</h5>
+        <div style="font-size: 30px;" class="text-center">
+        </div>
+        <h3 class="text-center">{{ inventory.model }}</h3>
+      </div>
+    </div>
+
+    <div class="card m-4" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title text-center">Quantity</h5>
+        <div style="font-size: 30px;" class="text-center">
+        </div>
+        <h3 class="text-center">{{ inventory.quantity }}</h3>
+      </div>
+    </div>
+
+    <div class="card m-4" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title text-center">Price in €</h5>
+        <div style="font-size: 30px;" class="text-center">
+        </div>
+        <h3 class="text-center">{{ inventory.price_per_piece }}</h3>
+      </div>
+    </div>
+
+    <div class="card m-4" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title text-center">Stock Date</h5>
+        <div style="font-size: 30px;" class="text-center">
+        </div>
+        <h3 class="text-center">{{ inventory.stock_date }}</h3>
+      </div>
+    </div>
+
+    <div class="card m-4" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title text-center">Ready to load</h5>
+        <div style="font-size: 30px;" class="text-center">
+        </div>
+        <h3 class="text-center">{{ inventory.ready_to_load }}</h3>
+      </div>
+    </div>
+    </div>
+     <a class="btn btn-success btn-sm mb-3" href="{% url 'invent:update_product' inventory.id %}">Update Product</a>
+     <a class="btn btn-danger btn-sm" href="{% url 'invent:delete_product' inventory.id %}">Delete Product</a>
+
+  </div>
+</div>
+{% endblock %}
